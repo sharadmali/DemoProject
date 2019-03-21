@@ -23,7 +23,7 @@ public class Demo1 {
 	}
 	
 	@Test
-	public void mul1() {	
+	public void mul() {	
 		
 		System.out.println("---------Multiplication");
 		int a = 10;
