@@ -4,6 +4,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 // Arithmatic operations
 public class Demo1 {
+	
+	//Addition
 	@Test
 	public void add() {			
 		
