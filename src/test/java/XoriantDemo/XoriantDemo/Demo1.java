@@ -47,4 +47,13 @@ public class Demo1 {
 		int b = 20;
 		Assert.assertEquals(200, a*b);
 	}
+	
+	@Test
+	public void div_01() {
+		
+		System.out.println("---------Division");
+		int a = 10;
+		int b = 20;
+		Assert.assertEquals(2, b/a);
+	}
 }
