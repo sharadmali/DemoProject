@@ -30,4 +30,13 @@ public class Demo1 {
 		int b = 20;
 		Assert.assertEquals(200, a*b);
 	}
+	
+	@Test
+	public void mul_01() {	
+		
+		System.out.println("---------Multiplication");
+		int a = 10;
+		int b = 20;
+		Assert.assertEquals(200, a*b);
+	}
 }
