@@ -21,4 +21,12 @@ public class Demo1 {
 		int b = 20;
 		Assert.assertEquals(10, b-a);
 	}
+	@Test
+	public void sub1() {	
+		
+		System.out.println("---------Subtraction");
+		int a = 10;
+		int b = 20;
+		Assert.assertEquals(10, b-a);
+	}
 }
