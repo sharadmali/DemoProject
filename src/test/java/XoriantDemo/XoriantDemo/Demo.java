@@ -9,7 +9,7 @@ public class Demo {
 	public void add() {			
 		
 		System.out.println("---------Addition");
-		int a = 10;
+		int a = 20;
 		int b = 20;
 		int c = 20;
 		Assert.assertEquals(30, a+b);
