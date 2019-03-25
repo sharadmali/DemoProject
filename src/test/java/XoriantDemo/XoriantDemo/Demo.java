@@ -25,6 +25,15 @@ public class Demo {
 	}
 	
 	@Test
+	public void sub_01() {	
+		
+		System.out.println("---------Subtraction");
+		int a = 10;
+		int b = 20;
+		Assert.assertEquals(10, b-a);
+	}
+	
+	@Test
 	public void mul() {	
 		
 		System.out.println("---------Multiplication");
