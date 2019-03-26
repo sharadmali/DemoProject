@@ -9,12 +9,9 @@ public class Demo {
 	public void add() {			
 		
 		System.out.println("---------Addition");
-		int a = 30;
-		int b = 20;
-		int c = 50;
-		int d = 60;
-		int e = 60;
-		int f = 60;
+		int a = 20;
+		int b = 10;
+		int c = 10;	
 		Assert.assertEquals(30, a+b);
 	}
 	
