@@ -1,6 +1,7 @@
-/target/
-/test-output/
-/.project
-/.settings
+*/target/**
+*/test-output/**
+.classpath
+.project
+.settings
 /testNG.xml
 /README.md
