@@ -14,6 +14,7 @@ public class Demo {
 		int c = 50;
 		int d = 60;
 		int e = 60;
+		int f = 60;
 		Assert.assertEquals(30, a+b);
 	}
 	
