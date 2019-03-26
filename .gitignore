@@ -1,0 +1,9 @@
+/bin/
+/target/
+/test-output/
+/AutomationOutput/
+#/.project
+/.settings
+/.metadata/
+/testNG.xml
+/README.md
