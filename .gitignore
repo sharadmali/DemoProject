@@ -1,7 +1,10 @@
-/target/**
-/test-output/**
-.classpath
-.project
-.settings
-/testNG.xml
+/target/
+/test-output/
+/AutomationOutput/
+/pom.xml
+/testng.xml
 /README.md
+/.project
+/.settings
+/.metadata/
+/.classpath
