@@ -30,8 +30,8 @@ public class Demo {
 		
 		WebDriver driver = null;
 		
-		String browser = "chrome";
-		//String browser = "ie";
+		//String browser = "chrome";
+		String browser = "ie";
 		
 		switch (browser.toLowerCase()) {
 		
@@ -46,7 +46,7 @@ public class Demo {
 			options.addArguments("--incognito");
 			options.addArguments("--no-sandbox");
 			options.addArguments("start-maximized");
-			options.addArguments("--headless");
+			//options.addArguments("--headless");
 			options.addArguments("--disable-dev-shm-usage");
 			options.setExperimentalOption("useAutomationExtension", false);
 			capabilities.setCapability(ChromeOptions.CAPABILITY, options);
@@ -55,7 +55,9 @@ public class Demo {
 			break;
 			
 		case "ie":
-			WebDriverManager.iedriver().setup();						
+			//WebDriverManager.iedriver().setup();	
+			
+			System.setProperty("webdriver.ie.driver", "D:\\IEDriverServer.exe");
 			DesiredCapabilities caps = DesiredCapabilities.internetExplorer();
 			
 			//caps.setCapability(InternetExplorerDriver.IGNORE_ZOOM_SETTING, true);
