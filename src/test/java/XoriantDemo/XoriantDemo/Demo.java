@@ -27,6 +27,7 @@ public class Demo {
 		driver.navigate().to("http://www.airindia.in");
 		WebElement elm = driver.findElement(By.xpath("//a[text()='Home']"));
 		elm.click();
+		System.out.println("---------CLick on Home link");
 	}
 	@Test
 	public void add() {			
