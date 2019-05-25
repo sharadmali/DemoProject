@@ -1,10 +1,33 @@
 package XoriantDemo.XoriantDemo;
 
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class Demo {
+	public WebDriver driver;
 	
+	@Test
+	public void launch() {
+		
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
+		
+		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.navigate().to("http://www.airindia.in");
+		WebElement elm = driver.findElement(By.xpath("//a[text()='Home']"));
+		elm.click();
+	}
 	@Test
 	public void add() {			
 		
