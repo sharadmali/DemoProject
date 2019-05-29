@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -30,8 +31,8 @@ public class Demo {
 		
 		WebDriver driver = null;
 		
-		//String browser = "chrome";
-		String browser = "ie";
+		String browser = "chrome";
+		//String browser = "ie";
 		
 		switch (browser.toLowerCase()) {
 		
@@ -46,7 +47,7 @@ public class Demo {
 			options.addArguments("--incognito");
 			options.addArguments("--no-sandbox");
 			options.addArguments("start-maximized");
-			//options.addArguments("--headless");
+			options.addArguments("--headless");
 			options.addArguments("--disable-dev-shm-usage");
 			options.setExperimentalOption("useAutomationExtension", false);
 			capabilities.setCapability(ChromeOptions.CAPABILITY, options);
@@ -55,12 +56,11 @@ public class Demo {
 			break;
 			
 		case "ie":
-			//WebDriverManager.iedriver().setup();	
+			WebDriverManager.iedriver().setup();				
+			//System.setProperty("webdriver.ie.driver", "D:\\IEDriverServer.exe");
 			
-			System.setProperty("webdriver.ie.driver", "D:\\IEDriverServer.exe");
-			DesiredCapabilities caps = DesiredCapabilities.internetExplorer();
-			
-			//caps.setCapability(InternetExplorerDriver.IGNORE_ZOOM_SETTING, true);
+			DesiredCapabilities caps = DesiredCapabilities.internetExplorer();			
+			caps.setCapability(InternetExplorerDriver.IGNORE_ZOOM_SETTING, true);
 			caps.setCapability(InternetExplorerDriver.REQUIRE_WINDOW_FOCUS, true);
 			caps.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
 			caps.setCapability(InternetExplorerDriver.IGNORE_ZOOM_SETTING, true);
@@ -74,25 +74,25 @@ public class Demo {
 		}
 		
 		driver.get("http://www.google.com");
+		driver.manage().window().setSize(new Dimension(1440, 900));
 		WebElement element = driver.findElement(By.name("q"));
 		element.sendKeys("Guru99");
+		
 		element.submit();
+		
 		
 		Thread.sleep(5000);
 		JavascriptExecutor je = (JavascriptExecutor) driver;		
 		WebElement elm = driver.findElement(By.xpath("//*[@id='gb_70']"));
-		je.executeScript("arguments[0].scrollIntoView(true);",elm);
-		
+		je.executeScript("arguments[0].scrollIntoView(true);",elm);		
 		elm.click();
 		
 		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		try {			
 			FileUtils.copyFile(src, new File("C:\\Temp\\error.png"));
 		}
-
 		catch (IOException e) {
 			System.out.println(e.getMessage());
-
 		}
 		
 		System.out.println("Page title is: " + driver.getTitle());
