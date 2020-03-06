@@ -35,7 +35,11 @@
 '@see UTIL_ValidateTrue
 
 Function UTIL_AssertTrue(boolExpression, strEvent, strDetails)
+<<<<<<< HEAD
     UTIL_AssertTrue = UTIL_ValidateTrue(boolExpression, strEvent, strDetails, "UTIL_AssertTrue","Hi")
+=======
+    UTIL_AssertTrue = UTIL_ValidateTrue(boolExpression, strEvent, strDetails, "UTIL_AssertTrue","Hello")
+>>>>>>> 0b9b2418e89ca938c883289ad97b5d36ad40f62a
 End Function
 
 
