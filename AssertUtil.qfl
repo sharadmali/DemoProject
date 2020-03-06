@@ -1,7 +1,7 @@
 ''''''''''''''''''''''''''''''''''''''''''
 ' @defgroup: AssertUtil UTIL_AssertUtil
 ' This is the function group for assertions and checkpoints
-' 
+'
 ' List of functions here
 ' Test for Build 9 change
 ' @code
@@ -35,11 +35,11 @@
 '@see UTIL_ValidateTrue
 
 Function UTIL_AssertTrue(boolExpression, strEvent, strDetails)
-    UTIL_AssertTrue = UTIL_ValidateTrue(boolExpression, strEvent, strDetails, "UTIL_AssertTrue")
+    UTIL_AssertTrue = UTIL_ValidateTrue(boolExpression, strEvent, strDetails, "UTIL_AssertTrue","Hi")
 End Function
-	
-    
-    
+
+
+
 'Assertion to see if specified expression evaluates to false
 '@code
 '    UTIL_AssertFalse(boolExpression, strEvent, strDetails)
